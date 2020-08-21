@@ -1,0 +1,57 @@
+<html lang="pt_BR">
+<head>
+    <title>Price Editor</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <meta name="msapplication-TileColor" content="#202020">
+
+    <meta name="theme-color" content="#202020">
+</head>
+<body style="background-color: #202020">
+
+<div class="container" style="margin-top: 5%">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <input placeholder="Nome do produto" id="nome_produto" type="text" class="form-control" style="border-top: none; border-left: none; border-right: none; background-color: #202020; color: white">
+                </div>
+                <div class="col-sm-6">
+                    <input placeholder="Preço do produto" id="price_product" type="text" class="form-control" style="border-top: none; border-left: none; border-right: none; background-color: #202020; color: white">
+                </div>
+            </div>
+            <button class="btn btn-primary mt-5" onclick="gerarCard()" style="width: 100%">GERAR PREÇO</button>
+        </div>
+    </div>
+    <div class="row mt-5 ml-4">
+        <div class="col-sm-12 text-center">
+            <div class="imagem p-5">
+                <h3 class="product" id="product"></h3>
+                <h1 class="price p-5 ml-n3" id="price"></h1>
+                <img src="img/atacadao-logo.svg">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="scripts/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script>
+    function gerarCard(){
+        let produto = document.getElementById('nome_produto').value
+        let preco = document.getElementById('price_product').value
+        let cardProduct = document.getElementById('product')
+        let cardPrice = document.getElementById('price')
+
+        cardProduct.innerHTML = produto
+        cardPrice.innerHTML = preco
+    }
+
+</script>
+</body>
+</html>
